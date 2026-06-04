@@ -12,8 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LocalizacaoRouteImport } from './routes/localizacao'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AcomodacoesRouteImport } from './routes/acomodacoes'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin/index'
+import { Route as AuthenticatedAdminReservasRouteImport } from './routes/_authenticated/admin/reservas'
+import { Route as AuthenticatedAdminDepoimentosRouteImport } from './routes/_authenticated/admin/depoimentos'
+import { Route as AuthenticatedAdminConfiguracoesRouteImport } from './routes/_authenticated/admin/configuracoes'
+import { Route as AuthenticatedAdminAcomodacoesRouteImport } from './routes/_authenticated/admin/acomodacoes'
 
 const LocalizacaoRoute = LocalizacaoRouteImport.update({
   id: '/localizacao',
@@ -30,9 +37,18 @@ const ContatoRoute = ContatoRouteImport.update({
   path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AcomodacoesRoute = AcomodacoesRouteImport.update({
   id: '/acomodacoes',
   path: '/acomodacoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -40,40 +56,125 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedAdminReservasRoute =
+  AuthenticatedAdminReservasRouteImport.update({
+    id: '/admin/reservas',
+    path: '/admin/reservas',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAdminDepoimentosRoute =
+  AuthenticatedAdminDepoimentosRouteImport.update({
+    id: '/admin/depoimentos',
+    path: '/admin/depoimentos',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAdminConfiguracoesRoute =
+  AuthenticatedAdminConfiguracoesRouteImport.update({
+    id: '/admin/configuracoes',
+    path: '/admin/configuracoes',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAdminAcomodacoesRoute =
+  AuthenticatedAdminAcomodacoesRouteImport.update({
+    id: '/admin/acomodacoes',
+    path: '/admin/acomodacoes',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/acomodacoes': typeof AcomodacoesRoute
+  '/auth': typeof AuthRoute
   '/contato': typeof ContatoRoute
   '/faq': typeof FaqRoute
   '/localizacao': typeof LocalizacaoRoute
+  '/admin/acomodacoes': typeof AuthenticatedAdminAcomodacoesRoute
+  '/admin/configuracoes': typeof AuthenticatedAdminConfiguracoesRoute
+  '/admin/depoimentos': typeof AuthenticatedAdminDepoimentosRoute
+  '/admin/reservas': typeof AuthenticatedAdminReservasRoute
+  '/admin/': typeof AuthenticatedAdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/acomodacoes': typeof AcomodacoesRoute
+  '/auth': typeof AuthRoute
   '/contato': typeof ContatoRoute
   '/faq': typeof FaqRoute
   '/localizacao': typeof LocalizacaoRoute
+  '/admin/acomodacoes': typeof AuthenticatedAdminAcomodacoesRoute
+  '/admin/configuracoes': typeof AuthenticatedAdminConfiguracoesRoute
+  '/admin/depoimentos': typeof AuthenticatedAdminDepoimentosRoute
+  '/admin/reservas': typeof AuthenticatedAdminReservasRoute
+  '/admin': typeof AuthenticatedAdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/acomodacoes': typeof AcomodacoesRoute
+  '/auth': typeof AuthRoute
   '/contato': typeof ContatoRoute
   '/faq': typeof FaqRoute
   '/localizacao': typeof LocalizacaoRoute
+  '/_authenticated/admin/acomodacoes': typeof AuthenticatedAdminAcomodacoesRoute
+  '/_authenticated/admin/configuracoes': typeof AuthenticatedAdminConfiguracoesRoute
+  '/_authenticated/admin/depoimentos': typeof AuthenticatedAdminDepoimentosRoute
+  '/_authenticated/admin/reservas': typeof AuthenticatedAdminReservasRoute
+  '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/acomodacoes' | '/contato' | '/faq' | '/localizacao'
+  fullPaths:
+    | '/'
+    | '/acomodacoes'
+    | '/auth'
+    | '/contato'
+    | '/faq'
+    | '/localizacao'
+    | '/admin/acomodacoes'
+    | '/admin/configuracoes'
+    | '/admin/depoimentos'
+    | '/admin/reservas'
+    | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/acomodacoes' | '/contato' | '/faq' | '/localizacao'
-  id: '__root__' | '/' | '/acomodacoes' | '/contato' | '/faq' | '/localizacao'
+  to:
+    | '/'
+    | '/acomodacoes'
+    | '/auth'
+    | '/contato'
+    | '/faq'
+    | '/localizacao'
+    | '/admin/acomodacoes'
+    | '/admin/configuracoes'
+    | '/admin/depoimentos'
+    | '/admin/reservas'
+    | '/admin'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/acomodacoes'
+    | '/auth'
+    | '/contato'
+    | '/faq'
+    | '/localizacao'
+    | '/_authenticated/admin/acomodacoes'
+    | '/_authenticated/admin/configuracoes'
+    | '/_authenticated/admin/depoimentos'
+    | '/_authenticated/admin/reservas'
+    | '/_authenticated/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AcomodacoesRoute: typeof AcomodacoesRoute
+  AuthRoute: typeof AuthRoute
   ContatoRoute: typeof ContatoRoute
   FaqRoute: typeof FaqRoute
   LocalizacaoRoute: typeof LocalizacaoRoute
@@ -102,11 +203,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/acomodacoes': {
       id: '/acomodacoes'
       path: '/acomodacoes'
       fullPath: '/acomodacoes'
       preLoaderRoute: typeof AcomodacoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -116,12 +231,68 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/admin/': {
+      id: '/_authenticated/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/admin/reservas': {
+      id: '/_authenticated/admin/reservas'
+      path: '/admin/reservas'
+      fullPath: '/admin/reservas'
+      preLoaderRoute: typeof AuthenticatedAdminReservasRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/admin/depoimentos': {
+      id: '/_authenticated/admin/depoimentos'
+      path: '/admin/depoimentos'
+      fullPath: '/admin/depoimentos'
+      preLoaderRoute: typeof AuthenticatedAdminDepoimentosRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/admin/configuracoes': {
+      id: '/_authenticated/admin/configuracoes'
+      path: '/admin/configuracoes'
+      fullPath: '/admin/configuracoes'
+      preLoaderRoute: typeof AuthenticatedAdminConfiguracoesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/admin/acomodacoes': {
+      id: '/_authenticated/admin/acomodacoes'
+      path: '/admin/acomodacoes'
+      fullPath: '/admin/acomodacoes'
+      preLoaderRoute: typeof AuthenticatedAdminAcomodacoesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminAcomodacoesRoute: typeof AuthenticatedAdminAcomodacoesRoute
+  AuthenticatedAdminConfiguracoesRoute: typeof AuthenticatedAdminConfiguracoesRoute
+  AuthenticatedAdminDepoimentosRoute: typeof AuthenticatedAdminDepoimentosRoute
+  AuthenticatedAdminReservasRoute: typeof AuthenticatedAdminReservasRoute
+  AuthenticatedAdminIndexRoute: typeof AuthenticatedAdminIndexRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminAcomodacoesRoute: AuthenticatedAdminAcomodacoesRoute,
+  AuthenticatedAdminConfiguracoesRoute: AuthenticatedAdminConfiguracoesRoute,
+  AuthenticatedAdminDepoimentosRoute: AuthenticatedAdminDepoimentosRoute,
+  AuthenticatedAdminReservasRoute: AuthenticatedAdminReservasRoute,
+  AuthenticatedAdminIndexRoute: AuthenticatedAdminIndexRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AcomodacoesRoute: AcomodacoesRoute,
+  AuthRoute: AuthRoute,
   ContatoRoute: ContatoRoute,
   FaqRoute: FaqRoute,
   LocalizacaoRoute: LocalizacaoRoute,
@@ -129,3 +300,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
