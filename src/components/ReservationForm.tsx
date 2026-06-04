@@ -37,7 +37,7 @@ export function ReservationForm({ compact = false }: { compact?: boolean }) {
     try {
       const { data: roomRow } = await supabase
         .from("rooms").select("id").eq("slug", data.room).maybeSingle();
-      await supabase.from("reservations").insert({
+      const { error } = await supabase.from("reservations").insert({
         room_id: roomRow?.id ?? null,
         guest_name: data.name,
         email: data.email,
@@ -47,8 +47,17 @@ export function ReservationForm({ compact = false }: { compact?: boolean }) {
         payment_method: data.payment,
         status: "pending",
       });
+      if (error) {
+        console.error("Reservation insert error:", error);
+        toast.error("Não foi possível salvar a reserva: " + error.message);
+        setSubmitting(false);
+        return;
+      }
     } catch (e) {
       console.error(e);
+      toast.error("Erro ao enviar reserva.");
+      setSubmitting(false);
+      return;
     }
     const msg = encodeURIComponent(
       `Olá! Gostaria de reservar.\n\nNome: ${data.name}\nE-mail: ${data.email}\nTelefone: ${data.phone}\nQuarto: ${data.room}\nCheck-in: ${data.checkin}\nCheck-out: ${data.checkout}\nPagamento: ${data.payment}`,
