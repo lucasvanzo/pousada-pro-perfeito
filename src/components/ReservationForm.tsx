@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ROOMS, SITE } from "@/lib/site";
 import { toast } from "sonner";
 import { MessageCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   name: z.string().min(2, "—"),
@@ -26,13 +27,29 @@ type FormData = z.infer<typeof schema>;
 export function ReservationForm({ compact = false }: { compact?: boolean }) {
   const { t } = useTranslation();
   const [submitting, setSubmitting] = useState(false);
-  const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<FormData>({
+  const { register, handleSubmit, setValue, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: { room: ROOMS[0].slug, payment: "pix" },
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     setSubmitting(true);
+    try {
+      const { data: roomRow } = await supabase
+        .from("rooms").select("id").eq("slug", data.room).maybeSingle();
+      await supabase.from("reservations").insert({
+        room_id: roomRow?.id ?? null,
+        guest_name: data.name,
+        email: data.email,
+        phone: data.phone,
+        check_in: data.checkin,
+        check_out: data.checkout,
+        payment_method: data.payment,
+        status: "pending",
+      });
+    } catch (e) {
+      console.error(e);
+    }
     const msg = encodeURIComponent(
       `Olá! Gostaria de reservar.\n\nNome: ${data.name}\nE-mail: ${data.email}\nTelefone: ${data.phone}\nQuarto: ${data.room}\nCheck-in: ${data.checkin}\nCheck-out: ${data.checkout}\nPagamento: ${data.payment}`,
     );
