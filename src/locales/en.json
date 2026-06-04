@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "location": "Location",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Book"
+  },
+  "hero": {
+    "title": "Estalagem Colonial",
+    "subtitle": "Discover Paraty",
+    "tagline": "Historic stay in the heart of the UNESCO World Heritage town",
+    "cta_book": "Book now",
+    "cta_rooms": "See rooms"
+  },
+  "reservation": {
+    "title": "Request your reservation",
+    "subtitle": "Fill in the details below. Your request will be sent by email.",
+    "name": "Full name",
+    "name_placeholder": "Type your full name",
+    "email": "Email",
+    "phone": "Phone / WhatsApp",
+    "room": "Room",
+    "payment": "Payment method",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "submit": "Book now",
+    "success": "Request sent! We'll get back to you shortly.",
+    "payments": {
+      "pix": "Pix",
+      "card": "Credit Card",
+      "transfer": "Bank Transfer"
+    }
+  },
+  "about": {
+    "eyebrow": "Feel at home",
+    "title": "The colonial inn",
+    "p1": "A welcoming inn in Paraty's historic center, with preserved colonial architecture and warm family hospitality.",
+    "p2": "Our open kitchen serves a regional breakfast with tropical fruits, homemade breads and specialty coffees."
+  },
+  "highlights": {
+    "title": "Our spaces",
+    "facade": {
+      "title": "The Inn",
+      "desc": "Our beautiful preserved colonial façade"
+    },
+    "common": {
+      "title": "Common Area",
+      "desc": "Cozy and historic ambiances"
+    },
+    "experiences": {
+      "title": "Experiences",
+      "desc": "Boat tours, trails and Paraty gastronomy"
+    },
+    "see_more": "See more photos"
+  },
+  "testimonials": {
+    "title": "What our guests say",
+    "leave_review": "Leave your review",
+    "moderation": "Your review is published after approval.",
+    "your_name": "Your name",
+    "your_rating": "Your rating",
+    "your_review": "Your review",
+    "submit": "Submit review"
+  },
+  "location": {
+    "eyebrow": "Location",
+    "title": "Discover Paraty",
+    "description": "We are in the historic center of Paraty, declared a UNESCO World Heritage Site. Walk through the charming cobblestone streets with the best restaurants, craft shops and historic landmarks: Santa Rita Church, Matriz Square, Nossa Senhora do Rosário and São Benedito Church and Nossa Senhora das Dores Church.",
+    "address": "Rua Comendador José Luiz, 231 — House 07, Historic Center, Paraty/RJ",
+    "see_map": "See on map",
+    "card_title": "UNESCO Historic Center",
+    "card_desc": "A short walk from Matriz Church, Bandeira Square, art studios and the best restaurants.",
+    "poi": {
+      "church": "5 min walk — Santa Rita Church",
+      "restaurants": "3 min walk — Colonial restaurants",
+      "port": "10 min walk — Port and boat tours",
+      "beaches": "20 min drive — Paradise beaches"
+    }
+  },
+  "rooms": {
+    "title": "Our Rooms",
+    "subtitle": "Three comfortable rooms with colonial decor and modern amenities.",
+    "from": "From",
+    "per_night": "per night",
+    "guests": "{{count}} guests",
+    "book_this": "Book this room",
+    "amenities": "Amenities",
+    "list": {
+      "room1": {
+        "name": "Colonial Room",
+        "desc": "Main room with balcony, view of the inner patio, queen bed and air conditioning."
+      },
+      "room2": {
+        "name": "Casario Room",
+        "desc": "Cozy, with windows facing the cobblestone street and preserved rustic decor."
+      },
+      "room3": {
+        "name": "Patio Room",
+        "desc": "Family room with double bed and two single beds, private bathroom."
+      }
+    },
+    "amen": {
+      "wifi": "Free Wi-Fi",
+      "ac": "Air conditioning",
+      "breakfast": "Breakfast included",
+      "private_bath": "Private bathroom",
+      "tv": "Smart TV",
+      "bedlinen": "Premium bedding"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before booking.",
+    "items": [
+      { "q": "What are check-in and check-out times?", "a": "Check-in from 2 PM and check-out until 11 AM. Late check-out subject to availability." },
+      { "q": "Is breakfast included?", "a": "Yes. We serve regional breakfast from 8 AM to 10 AM in the common room." },
+      { "q": "Do you accept pets?", "a": "We accept small pets with prior notice." },
+      { "q": "Is there parking?", "a": "Paraty's historic center is pedestrian-only. We recommend partnered parking 2 minutes walking distance away." },
+      { "q": "What payment methods do you accept?", "a": "Pix, credit card and bank transfer." },
+      { "q": "Can I cancel my reservation?", "a": "Yes, cancellations more than 7 days in advance get a full refund." }
+    ]
+  },
+  "contact": {
+    "title": "Talk to us",
+    "subtitle": "We're ready to welcome you. Send a message or reach us on WhatsApp.",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message",
+    "whatsapp": "Open WhatsApp",
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "social": "Social"
+  },
+  "footer": {
+    "tagline": "Historic stay in the heart of Paraty.",
+    "navigate": "Navigate",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "All rights reserved.",
+    "unesco": "Historic Center — UNESCO Heritage"
+  },
+  "common": {
+    "loading": "Loading...",
+    "language": "Language"
+  }
+}

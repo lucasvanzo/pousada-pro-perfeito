@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "rooms": "Habitaciones",
+    "location": "Ubicación",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "book": "Reservar"
+  },
+  "hero": {
+    "title": "Estalagem Colonial",
+    "subtitle": "Descubre Paraty",
+    "tagline": "Alojamiento histórico en el corazón del centro declarado Patrimonio de la UNESCO",
+    "cta_book": "Reservar ahora",
+    "cta_rooms": "Ver habitaciones"
+  },
+  "reservation": {
+    "title": "Solicita tu reserva",
+    "subtitle": "Completa los datos a continuación. Tu solicitud se enviará por correo.",
+    "name": "Nombre completo",
+    "name_placeholder": "Escribe tu nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Teléfono / WhatsApp",
+    "room": "Habitación",
+    "payment": "Forma de pago",
+    "checkin": "Entrada",
+    "checkout": "Salida",
+    "submit": "Reservar ahora",
+    "success": "¡Solicitud enviada! Te contactaremos en breve.",
+    "payments": {
+      "pix": "Pix",
+      "card": "Tarjeta de crédito",
+      "transfer": "Transferencia bancaria"
+    }
+  },
+  "about": {
+    "eyebrow": "Siéntete en casa",
+    "title": "La posada colonial",
+    "p1": "Una posada acogedora en el centro histórico de Paraty, con arquitectura colonial preservada y atención familiar.",
+    "p2": "Nuestra cocina integrada sirve un desayuno regional con frutas tropicales, panes caseros y cafés especiales."
+  },
+  "highlights": {
+    "title": "Nuestros espacios",
+    "facade": {
+      "title": "La Posada",
+      "desc": "Nuestra hermosa fachada colonial preservada"
+    },
+    "common": {
+      "title": "Área Común",
+      "desc": "Ambientes acogedores e históricos"
+    },
+    "experiences": {
+      "title": "Experiencias",
+      "desc": "Paseos en barco, senderos y gastronomía de Paraty"
+    },
+    "see_more": "Ver más fotos"
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros huéspedes",
+    "leave_review": "Deja tu reseña",
+    "moderation": "Tu opinión se publica tras aprobación.",
+    "your_name": "Tu nombre",
+    "your_rating": "Tu calificación",
+    "your_review": "Tu reseña",
+    "submit": "Enviar reseña"
+  },
+  "location": {
+    "eyebrow": "Ubicación",
+    "title": "Conoce Paraty",
+    "description": "Estamos en el centro histórico de Paraty, declarado Patrimonio de la Humanidad por la UNESCO. Camina por las encantadoras calles empedradas con los mejores restaurantes, tiendas de artesanía e hitos históricos: Iglesia de Santa Rita, Plaza Matriz, Iglesia de Nuestra Señora del Rosario y San Benito e Iglesia de Nuestra Señora de los Dolores.",
+    "address": "Rua Comendador José Luiz, 231 — Casa 07, Centro Histórico, Paraty/RJ",
+    "see_map": "Ver en el mapa",
+    "card_title": "Centro Histórico UNESCO",
+    "card_desc": "A pocos pasos de la Iglesia Matriz, Plaza de la Bandera, talleres de arte y los mejores restaurantes.",
+    "poi": {
+      "church": "5 min a pie — Iglesia de Santa Rita",
+      "restaurants": "3 min a pie — Restaurantes coloniales",
+      "port": "10 min a pie — Puerto y paseos en barco",
+      "beaches": "20 min en auto — Playas paradisíacas"
+    }
+  },
+  "rooms": {
+    "title": "Nuestras habitaciones",
+    "subtitle": "Tres habitaciones cómodas con decoración colonial y comodidades modernas.",
+    "from": "Desde",
+    "per_night": "por noche",
+    "guests": "{{count}} huéspedes",
+    "book_this": "Reservar esta habitación",
+    "amenities": "Comodidades",
+    "list": {
+      "room1": {
+        "name": "Habitación Colonial",
+        "desc": "Habitación principal con balcón, vista al patio interior, cama queen y aire acondicionado."
+      },
+      "room2": {
+        "name": "Habitación Casario",
+        "desc": "Acogedora, con ventanas a la calle empedrada y decoración rústica preservada."
+      },
+      "room3": {
+        "name": "Habitación Patio",
+        "desc": "Habitación familiar con cama matrimonial y dos camas individuales, baño privado."
+      }
+    },
+    "amen": {
+      "wifi": "Wi-Fi gratis",
+      "ac": "Aire acondicionado",
+      "breakfast": "Desayuno incluido",
+      "private_bath": "Baño privado",
+      "tv": "Smart TV",
+      "bedlinen": "Ropa de cama premium"
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber antes de reservar.",
+    "items": [
+      { "q": "¿Cuáles son los horarios de entrada y salida?", "a": "Entrada desde las 14h y salida hasta las 11h. Salida tardía sujeta a disponibilidad." },
+      { "q": "¿El desayuno está incluido?", "a": "Sí. Servimos desayuno regional de 8h a 10h en la sala común." },
+      { "q": "¿Aceptan mascotas?", "a": "Aceptamos mascotas pequeñas con aviso previo." },
+      { "q": "¿Hay estacionamiento?", "a": "El centro histórico de Paraty es peatonal. Recomendamos estacionamientos asociados a 2 minutos a pie." },
+      { "q": "¿Qué formas de pago aceptan?", "a": "Pix, tarjeta de crédito y transferencia bancaria." },
+      { "q": "¿Puedo cancelar mi reserva?", "a": "Sí, cancelaciones con más de 7 días de anticipación tienen reembolso total." }
+    ]
+  },
+  "contact": {
+    "title": "Habla con nosotros",
+    "subtitle": "Estamos listos para recibirte. Envía tu mensaje o escríbenos por WhatsApp.",
+    "name": "Tu nombre",
+    "email": "Tu correo",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "whatsapp": "Abrir WhatsApp",
+    "address_label": "Dirección",
+    "phone_label": "Teléfono",
+    "email_label": "Correo",
+    "social": "Redes"
+  },
+  "footer": {
+    "tagline": "Alojamiento histórico en el corazón de Paraty.",
+    "navigate": "Navega",
+    "contact": "Contacto",
+    "follow": "Síguenos",
+    "rights": "Todos los derechos reservados.",
+    "unesco": "Centro Histórico — Patrimonio UNESCO"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "language": "Idioma"
+  }
+}
