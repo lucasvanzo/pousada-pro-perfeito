@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { useQueryClient } from "@tanstack/react-query";
 
-const nav = [
+const nav: Array<{ to: string; label: string; icon: typeof LayoutDashboard; end?: boolean }> = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, end: true },
   { to: "/admin/reservas", label: "Reservas", icon: Calendar },
   { to: "/admin/acomodacoes", label: "Acomodações", icon: BedDouble },
   { to: "/admin/depoimentos", label: "Depoimentos", icon: MessageSquareQuote },
   { to: "/admin/configuracoes", label: "Configurações", icon: Settings },
-] as const;
+];
 
 export function AdminLayout({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
