@@ -47,9 +47,14 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-cream/10">
-        <div className="container-prose py-6 text-xs text-cream/50 flex flex-col md:flex-row justify-between gap-2">
+        <div className="container-prose py-6 text-xs text-cream/50 flex flex-col md:flex-row justify-between items-center gap-2">
           <p>© {new Date().getFullYear()} Estalagem Colonial. {t("footer.rights")}</p>
-          <p>{SITE.city}</p>
+          <div className="flex items-center gap-4">
+            <p>{SITE.city}</p>
+            <Link to="/auth" className="text-cream/60 hover:text-gold transition-colors">
+              Área Admin
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
